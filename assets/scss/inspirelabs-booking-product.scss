@@ -1,0 +1,21 @@
+/**
+ * Bookings Frontend
+ *
+ * @package InspireLabs/Otomoto
+ * @since 2.0.0
+ */
+
+// Theme variables
+@import "variables";
+@import "mixins";
+
+// Dependencies
+@import "swiper";
+@import "glightbox";
+
+// Single product
+@import "product_title";
+@import "product_gallery";
+@import "product_booking_form";
+@import "product_details";
+@import "product_related_products";

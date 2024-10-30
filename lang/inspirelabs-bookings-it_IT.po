@@ -1,0 +1,424 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Inspirelabs Bookings 1.0\n"
+"Report-Msgid-Bugs-To: https://ilabs.dev/contact\n"
+"POT-Creation-Date: 2021-10-12T19:01:36+00:00\n"
+"PO-Revision-Date: 2022-07-20 13:33+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: it_IT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 3.1\n"
+"X-Domain: inspirelabs-bookings\n"
+"X-Poedit-Basepath: ../src\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;\"\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#. Plugin Name
+msgid "iLabs Booking WooCommerce - apartments, boats, cars"
+msgstr "iLabs Booking WooCommerce - appartamenti, barche, auto"
+
+#. Description
+msgid "This plugin in integration with Woocommerce allows you to create different products for rent, with the output of the calendar for booking on the product page."
+msgstr "Questo plugin in integrazione con Woocommerce permette di creare diversi prodotti in affitto, con l'uscita del calendario per la prenotazione sulla pagina del prodotto."
+
+#. Author of the plugin
+msgid "ilabs.dev"
+msgstr "ilabs.dev"
+
+#. Author URI of the plugin
+msgid "https://ilabs.dev/"
+msgstr "https://ilabs.dev/"
+
+#: src/Plugin/Helpers/Common.php:24
+msgid "Any range"
+msgstr "Qualsiasi gamma"
+
+#: src/Plugin/Helpers/Common.php:25
+msgid "Book any interval within period"
+msgstr "Prenota qualsiasi intervallo nel periodo"
+
+#: src/Plugin/Helpers/Common.php:32
+msgid "Whole range"
+msgstr "Tutta la gamma"
+
+#: src/Plugin/Helpers/Common.php:33
+msgid "Only the entire period booking is allowed"
+msgstr "È consentita solo la prenotazione dell'intero periodo"
+
+#: src/Plugin/Admin/MainAdmin.php:83
+#: src/Plugin/Admin/WC_Product/PriceListDataTab.php:82
+msgid "Price List"
+msgstr "Listino prezzi"
+
+#: src/Plugin/Admin/WC_Product/PriceListDataTab.php:186
+msgid "Price per day (night)"
+msgstr "Prezzo al giorno (notte)"
+
+#: src/Plugin/Frontend/SingleProduct.php:133
+msgid "Book Now"
+msgstr "Prenota ora"
+
+#: src/Plugin/Frontend/SingleProduct.php:166
+msgid "Only entire week booking allowed starting from monday"
+msgstr "Solo la prenotazione dell'intera settimana è consentita a partire da lunedì"
+
+#: src/Plugin/Frontend/SingleProduct.php:167
+msgid "Only entire week booking allowed starting from tuesday"
+msgstr "Solo la prenotazione dell'intera settimana è consentita a partire da martedì"
+
+#: src/Plugin/Frontend/SingleProduct.php:168
+msgid "Only entire week booking allowed starting from wednesday"
+msgstr "Solo la prenotazione dell'intera settimana è consentita a partire da mercoledì"
+
+#: src/Plugin/Frontend/SingleProduct.php:169
+msgid "Only entire week booking allowed starting from thursday"
+msgstr "Solo la prenotazione dell'intera settimana è consentita a partire da giovedì"
+
+#: src/Plugin/Frontend/SingleProduct.php:170
+msgid "Only entire week booking allowed starting from friday"
+msgstr "Solo la prenotazione dell'intera settimana è consentita a partire da venerdì"
+
+#: src/Plugin/Frontend/SingleProduct.php:171
+msgid "Only entire week booking allowed starting from saturday"
+msgstr "Solo la prenotazione dell'intera settimana è consentita a partire da sabato"
+
+#: src/Plugin/Frontend/SingleProduct.php:172
+msgid "Only entire week booking allowed starting from sunday"
+msgstr "Solo la prenotazione dell'intera settimana è consentita a partire da domenica"
+
+#: src/Plugin/Frontend/SingleProduct.php:173
+msgid "Booking start"
+msgstr "Inizio della prenotazione"
+
+#: src/Plugin/Frontend/SingleProduct.php:174
+msgid "Booking end"
+msgstr "Fine della prenotazione"
+
+#: src/Plugin/Frontend/SingleProduct.php:175
+msgid "Check-in"
+msgstr "Check-in"
+
+#: src/Plugin/Frontend/SingleProduct.php:176
+msgid "Check-out"
+msgstr "Check-out"
+
+#: src/Plugin/Admin/WC_Order/order_details_template.php:21
+#: src/Plugin/Frontend/Order.php:194
+msgid "Date from"
+msgstr "Data da"
+
+#: src/Plugin/Admin/WC_Order/order_details_template.php:25
+#: src/Plugin/Frontend/Order.php:198
+msgid "Date to"
+msgstr "Data a"
+
+#: src/Plugin/Admin/WC_Order/order_details_template.php:30
+#: src/Plugin/Frontend/Order.php:203
+msgid "Nights no"
+msgstr "Notti"
+
+#: src/Plugin/Admin/WC_Order/order_details_template.php:35
+msgid "Selected days"
+msgstr "Giorni selezionati"
+
+#: src/Plugin/Admin/WC_Order/order_details_template.php:41
+msgid "per"
+msgstr "per"
+
+#: src/Plugin/Admin/WC_Order/order_details_template.php:51
+msgid "Edit booking"
+msgstr "Modifica prenotazione"
+
+#: src/Plugin/Admin/WC_Product/PriceListDataTab.php:180
+msgid "Start date"
+msgstr "Data di inizio"
+
+#: src/Plugin/Admin/WC_Product/PriceListDataTab.php:183
+msgid "End date"
+msgstr "Data di fine"
+
+#: src/Plugin/Admin/WC_Product/PriceListDataTab.php:189
+msgid "Duration"
+msgstr "Durata"
+
+#: src/Plugin/Admin/WC_Product/PriceListDataTab.php:192
+msgid "Options"
+msgstr "Opzioni"
+
+#: src/Plugin/Admin/WC_Product/PriceListDataTab.php:205
+msgid "Add row"
+msgstr "Aggiungere la fila"
+
+#: src/Plugin/Admin/WC_Product/PriceListDataTab.php:57
+#: src/Plugin/Admin/WC_Product/PriceListDataTab.php:315
+msgid "Edit"
+msgstr "Modifica"
+
+#: src/Plugin/Admin/WC_Product/PriceListDataTab.php:58
+#: src/Plugin/Admin/WC_Product/PriceListDataTab.php:318
+msgid "Delete"
+msgstr "Cancellare"
+
+#: src/Plugin/Admin/WC_Product/PriceListDataTab.php:56
+msgid "Accept"
+msgstr "Accettare"
+
+#: src/Plugin/Helpers/Common.php:28
+msgid "Week"
+msgstr "Settimana"
+
+#: src/Plugin/Helpers/Common.php:29
+msgid "Let book for week"
+msgstr "Prenota per la settimana"
+
+#: src/Plugin/Helpers/Common.php:55
+msgid "January"
+msgstr "Gennaio"
+
+#: src/Plugin/Helpers/Common.php:56
+msgid "Febraury"
+msgstr "Febbraio"
+
+#: src/Plugin/Helpers/Common.php:57
+msgid "March"
+msgstr "Marzo"
+
+#: src/Plugin/Helpers/Common.php:58
+msgid "April"
+msgstr "Aprile"
+
+#: src/Plugin/Helpers/Common.php:59
+msgid "May"
+msgstr "Maggio"
+
+#: src/Plugin/Helpers/Common.php:60
+msgid "June"
+msgstr "Giugno"
+
+#: src/Plugin/Helpers/Common.php:61
+msgid "July"
+msgstr "Luglio"
+
+#: src/Plugin/Helpers/Common.php:62
+msgid "August"
+msgstr "Agosto"
+
+#: src/Plugin/Helpers/Common.php:63
+msgid "September"
+msgstr "Settembre"
+
+#: src/Plugin/Helpers/Common.php:64
+msgid "October"
+msgstr "Ottobre"
+
+#: src/Plugin/Helpers/Common.php:65
+msgid "November"
+msgstr "Novembre"
+
+#: src/Plugin/Helpers/Common.php:66
+msgid "December"
+msgstr "Dicembre"
+
+#: src/Plugin/Helpers/Common.php:79
+msgid "Sun"
+msgstr "Do"
+
+#: src/Plugin/Helpers/Common.php:80
+msgid "Mon"
+msgstr "Lu"
+
+#: src/Plugin/Helpers/Common.php:81
+msgid "Tu"
+msgstr "Ma"
+
+#: src/Plugin/Helpers/Common.php:82
+msgid "Wed"
+msgstr "Me"
+
+#: src/Plugin/Helpers/Common.php:83
+msgid "Th"
+msgstr "Gi"
+
+#: src/Plugin/Helpers/Common.php:84
+msgid "Fri"
+msgstr "Ve"
+
+#: src/Plugin/Helpers/Common.php:85
+msgid "Sat"
+msgstr "Sa"
+
+#: src/Plugin/Admin/WC_Product/PriceListDataTab.php:65
+#: src/Plugin/Helpers/Common.php:104
+msgid "Sunday"
+msgstr "Domenica"
+
+#: src/Plugin/Admin/WC_Product/PriceListDataTab.php:59
+#: src/Plugin/Helpers/Common.php:98
+msgid "Monday"
+msgstr "Lunedì"
+
+#: src/Plugin/Admin/WC_Product/PriceListDataTab.php:60
+#: src/Plugin/Helpers/Common.php:99
+msgid "Tuesday"
+msgstr "Martedì"
+
+#: src/Plugin/Admin/WC_Product/PriceListDataTab.php:61
+#: src/Plugin/Helpers/Common.php:100
+msgid "Wednesday"
+msgstr "Mercoledì"
+
+#: src/Plugin/Admin/WC_Product/PriceListDataTab.php:62
+#: src/Plugin/Helpers/Common.php:101
+msgid "Thursday"
+msgstr "Giovedì"
+
+#: src/Plugin/Admin/WC_Product/PriceListDataTab.php:63
+#: src/Plugin/Helpers/Common.php:102
+msgid "Friday"
+msgstr "Venerdì"
+
+#: src/Plugin/Admin/WC_Product/PriceListDataTab.php:64
+#: src/Plugin/Helpers/Common.php:103
+msgid "Saturday"
+msgstr "Sabato"
+
+#: src/Plugin/Frontend/SingleProduct.php:123
+msgid "Your booking details"
+msgstr "I dettagli della sua prenotazione"
+
+#: src/Plugin/Frontend/SingleProduct.php:128
+msgid "Total"
+msgstr "Totale"
+
+#: src/Plugin/Frontend/Order.php:488
+msgid "Total days"
+msgstr "Giorni totali"
+
+#: Basic_Requirement_Checker.php:202
+#, php-format
+msgid "The &#8220;%s&#8221; plugin cannot run on PHP versions older than %s. Please contact your host and ask them to upgrade"
+msgstr "The &#8220;%s&#8221; plugin cannot run on PHP versions older than %s. Please contact your host and ask them to upgrade"
+
+#: Basic_Requirement_Checker.php:206
+#, php-format
+msgid "The &#8220;%s&#8221; plugin cannot run on WordPress versions older than %s. Please update WordPress"
+msgstr "The &#8220;%s&#8221; plugin cannot run on WordPress versions older than %s. Please update WordPress"
+
+#: Basic_Requirement_Checker.php:210
+#, php-format
+msgid "The &#8220;%s&#8221; plugin cannot run on WooCommerce versions older than %s. Please update WooCommerce"
+msgstr "The &#8220;%s&#8221; plugin cannot run on WooCommerce versions older than %s. Please update WooCommerce"
+
+#: Basic_Requirement_Checker.php:214
+#, php-format
+msgid "The &#8220;%s&#8221; plugin cannot run without OpenSSL module version at least %s. Please update OpenSSL module"
+msgstr "The &#8220;%s&#8221; plugin cannot run without OpenSSL module version at least %s. Please update OpenSSL module"
+
+#: Basic_Requirement_Checker.php:308
+#, php-format
+msgid "The &#8220;%1$s&#8221; plugin requires at least %2$s version of %3$s to work correctly. Please update it to its latest release"
+msgstr "The &#8220;%1$s&#8221; plugin requires at least %2$s version of %3$s to work correctly. Please update it to its latest release"
+
+#: Basic_Requirement_Checker.php:395
+#, php-format
+msgid "The &#8220;%s&#8221; plugin cannot run without %s active. Please install and activate %s plugin"
+msgstr "The &#8220;%s&#8221; plugin cannot run without %s active. Please install and activate %s plugin"
+
+#: Basic_Requirement_Checker.php:456
+#, php-format
+msgid "The &#8220;%s&#8221; plugin requires free %s plugin. <a href=\"%s\">Install %s →</a>"
+msgstr "The &#8220;%s&#8221; plugin requires free %s plugin. <a href=\"%s\">Install %s →</a>"
+
+#: Basic_Requirement_Checker.php:465
+#, php-format
+msgid "The &#8220;%s&#8221; plugin requires activating %s plugin. <a href=\"%s\">Activate %s →</a>"
+msgstr "The &#8220;%s&#8221; plugin requires activating %s plugin. <a href=\"%s\">Activate %s →</a>"
+
+#: Basic_Requirement_Checker.php:512
+#, php-format
+msgid "The &#8220;%s&#8221; plugin cannot run without %s php module installed. Please contact your host and ask them to install %s"
+msgstr "The &#8220;%s&#8221; plugin cannot run without %s php module installed. Please contact your host and ask them to install %s"
+
+#: Basic_Requirement_Checker.php:540
+#, php-format
+msgid "The &#8220;%s&#8221; plugin cannot run without %s php setting set to %s. Please contact your host and ask them to set %s"
+msgstr "The &#8220;%s&#8221; plugin cannot run without %s php setting set to %s. Please contact your host and ask them to set %s"
+
+#: Basic_Requirement_Checker_With_Update_Disable.php:27
+#, php-format
+msgid "The &#8220;%s&#8221; plugin disables temporarily as required %s plugin is being upgraded"
+msgstr "The &#8220;%s&#8221; plugin disables temporarily as required %s plugin is being upgraded"
+
+#: HelperRemoveNotice.php:46
+#, php-format
+msgid "We recommend to <a href=\"%s\">deactivate and remove</a> the \"WP Desk Helper\" plugin as it is no longer required by WP Desk plugins"
+msgstr "We recommend to <a href=\"%s\">deactivate and remove</a> the \"WP Desk Helper\" plugin as it is no longer required by WP Desk plugins"
+
+#: HelperRemoveNotice.php:66
+#, php-format
+msgid "We recommend to <a href=\"%s\">remove</a> the \"WP Desk Helper\" plugin as it is no longer required by WP Desk plugins"
+msgstr "We recommend to <a href=\"%s\">remove</a> the \"WP Desk Helper\" plugin as it is no longer required by WP Desk plugins"
+
+#: Integration/LogsIntegration.php:41
+msgid "Debug"
+msgstr "Debug"
+
+#: Integration/LogsIntegration.php:45
+msgid "WP Desk Debug Log"
+msgstr "WP Desk Debug Log"
+
+#: Integration/LogsIntegration.php:62 Integration/TrackerIntegration.php:80
+msgid "Enable"
+msgstr "Abilita"
+
+#: Integration/LogsIntegration.php:65
+#, php-format
+msgid "Writes error log to %s"
+msgstr "Escribe el registro de errores en %s"
+
+#: Integration/LogsIntegration.php:97
+#, php-format
+msgid "WP Desk Debug Log is enabled. %1$sPlease disable it after testing%2$s"
+msgstr "WP Desk Debug Log is enabled. %1$sPlease disable it after testing%2$s"
+
+#: Integration/TrackerIntegration.php:55
+msgid "Plugin usage tracking"
+msgstr "Plugin usage tracking"
+
+#: Integration/TrackerIntegration.php:59
+msgid "Allow WP Desk to track plugin usage"
+msgstr "Allow WP Desk to track plugin usage"
+
+#: Integration/TrackerIntegration.php:84
+#, php-format
+msgid "No sensitive data is tracked, %sread more%s"
+msgstr "No sensitive data is tracked, %sread more%s"
+
+#: Page/LibraryDebugPage.php:34 Page/LibraryDebugPage.php:35
+msgid "Library report"
+msgstr "Library report"
+
+#: Page/SettingsPage.php:68
+msgid "WP Desk Helper Settings"
+msgstr "WP Desk Helper Settings"
+
+#: UpgradeSoonNotice.php:66
+#, php-format
+msgid "The PHP version your shop is currently using is deprecated. We highly advise to upgrade it to at least %s since the support for this one will be dropped soon"
+msgstr "The PHP version your shop is currently using is deprecated. We highly advise to upgrade it to at least %s since the support for this one will be dropped soon"
+
+#: UpgradeSoonNotice.php:75
+#, php-format
+msgid "The WooCommerce version your shop is currently using is deprecated. We highly advise to upgrade it to at least %s since the support for this one will be dropped soon"
+msgstr "The WooCommerce version your shop is currently using is deprecated. We highly advise to upgrade it to at least %s since the support for this one will be dropped soon"
+
+#: UpgradeSoonNotice.php:84
+#, php-format
+msgid "The WordPress version your shop is currently using is deprecated. We highly advise to upgrade it to at least %s since the support for this one will be dropped soon"
+msgstr "The WordPress version your shop is currently using is deprecated. We highly advise to upgrade it to at least %s since the support for this one will be dropped soon"

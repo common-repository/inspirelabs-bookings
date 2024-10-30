@@ -1,0 +1,61 @@
+{
+	"name": "wpdesk/inspirelabs-bookings",
+	"authors": [
+		{
+			"name": "Piotr",
+			"email": "hi@inspirelabs.pl"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"WPDesk\\Bookings\\": "src/Plugin"
+		},
+		"classmap": [
+			"vendor_prefixed"
+		]
+	},
+	"autoload-dev": {
+		"classmap": [
+			"tests/unit",
+			"tests/integration"
+		]
+	},
+	"config": {
+		"sort-packages": true,
+		"platform": {
+			"php": "7.0"
+		}
+	},
+
+	"require": {
+		"php": ">=7.0",
+		"psr/log": "^1.0.1"
+	},
+	"require-dev": {
+		"10up/wp_mock": "*",
+		"wpdesk/wp-plugin-flow": "^2",
+		"phpunit/phpunit": "<7",
+		"wpdesk/wp-wpdesk-composer": "^2",
+	  	"tecnickcom/tcpdf": "^6.4",
+        "wpdesk/wp-wpdesk-helper-override": "^1.1.0"
+    },
+	"extra": {
+		"text-domain": "inspirelabs-bookings",
+		"translations-folder": "lang",
+		"translation-file-headers": {
+			"Project-Id-Version": "Plugin Template",
+			"Last-Translator": "Aleksander <hi@inspirelabs.pl>",
+			"X-Poedit-WPHeader": "inspirelabs-bookings.php"
+		},
+		"po-files": {
+			"pl_PL": "pl_PL.po"
+		}
+	},
+	"scripts": {
+		"test": "echo composer is alive",
+		"phpcs": "phpcs",
+		"phpunit-unit": "phpunit --configuration phpunit-unit.xml --coverage-text --colors=never",
+		"phpunit-integration": "phpunit --configuration phpunit-integration.xml --coverage-text --colors=never",
+		"docs": "apigen generate"
+	}
+}

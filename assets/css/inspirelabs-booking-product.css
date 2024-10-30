@@ -1,0 +1,621 @@
+/**
+ * Bookings Frontend
+ *
+ * @package InspireLabs/Bookings
+ * @since 2.0.0
+ */
+/**
+ * Variables
+ *
+ * @package woobiboo
+ * @since 3.0.0
+ */
+:root {
+  --color-status-book: #fcd581;
+  --color-status-pre-book: #fff8e8;
+  --color-day-hover: #c7eff7;
+  --color-day-selection: #90e0ef;
+  --color-border: #eeeeee;
+  --width-sidebar: 250px;
+}
+
+/**
+ * Mixins
+ *
+ * @package amberbody
+ * @since 1.0.0
+ */
+/**
+ * Swiper
+ *
+ * @package InspireLabs/Bookings
+ * @since 2.1.0
+ */
+.swiper-container {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  /* Fix of Webkit flickering */
+  z-index: 1;
+}
+
+.swiper-container-vertical > .swiper-wrapper {
+  flex-direction: column;
+}
+
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  transition-property: transform;
+  box-sizing: content-box;
+}
+
+.swiper-container-android .swiper-slide,
+.swiper-wrapper {
+  transform: translate3d(0px, 0, 0);
+}
+
+.swiper-container-multirow > .swiper-wrapper {
+  flex-wrap: wrap;
+}
+
+.swiper-container-multirow-column > .swiper-wrapper {
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.swiper-container-free-mode > .swiper-wrapper {
+  transition-timing-function: ease-out;
+  margin: 0 auto;
+}
+
+.swiper-container-pointer-events {
+  touch-action: pan-y;
+}
+.swiper-container-pointer-events.swiper-container-vertical {
+  touch-action: pan-x;
+}
+
+.swiper-slide {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition-property: transform;
+}
+
+.swiper-slide-invisible-blank {
+  visibility: hidden;
+}
+
+/* Auto Height */
+.swiper-container-autoheight,
+.swiper-container-autoheight .swiper-slide {
+  height: auto;
+}
+.swiper-container-autoheight .swiper-wrapper {
+  align-items: flex-start;
+  transition-property: transform, height;
+}
+
+/* CSS Mode */
+.swiper-container-css-mode > .swiper-wrapper {
+  overflow: auto;
+  scrollbar-width: none;
+  /* For Firefox */
+  -ms-overflow-style: none;
+  /* For Internet Explorer and Edge */
+}
+.swiper-container-css-mode > .swiper-wrapper::-webkit-scrollbar {
+  display: none;
+}
+.swiper-container-css-mode > .swiper-wrapper > .swiper-slide {
+  scroll-snap-align: start start;
+}
+
+.swiper-container-horizontal.swiper-container-css-mode > .swiper-wrapper {
+  scroll-snap-type: x mandatory;
+}
+
+.swiper-container-vertical.swiper-container-css-mode > .swiper-wrapper {
+  scroll-snap-type: y mandatory;
+}
+
+/* Controls */
+.swiper-container .swiper-button {
+  display: none;
+  position: absolute;
+  top: calc(50% - 25px);
+  z-index: 100;
+  width: 35px;
+  height: 60px;
+  background-color: #e5e5e5;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0px;
+}
+@media only screen and (min-width: 768px) {
+  .swiper-container .swiper-button {
+    display: flex;
+  }
+}
+.swiper-container .swiper-button.swiper-button-prev {
+  left: 5px;
+}
+.swiper-container .swiper-button.swiper-button-next {
+  right: 5px;
+}
+.swiper-container .swiper-button > svg {
+  overflow: visible;
+  display: block;
+  width: 14px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+.swiper-container .pagiantion-wrapper {
+  display: flex;
+  position: absolute;
+  bottom: 15px;
+  right: 5px;
+  z-index: 2;
+  background-color: #e5e5e5;
+  padding: 2px 7px;
+  border-radius: 4px;
+  color: black;
+  font-size: 13px;
+}
+@media only screen and (min-width: 768px) {
+  .swiper-container .pagiantion-wrapper {
+    font-size: 15px;
+  }
+}
+.swiper-container .pagiantion-wrapper > svg {
+  display: none;
+  width: 17px;
+  height: auto;
+  margin-right: 5px;
+  transform: translateY(-0.5px);
+}
+@media only screen and (min-width: 768px) {
+  .swiper-container .pagiantion-wrapper > svg {
+    display: block;
+  }
+}
+
+
+#inspirelabs-booking-form {
+  margin-bottom: 40px;
+  max-width: 100%;
+  width: 100%;
+}
+
+#inspirelabs-booking-form.inspirelabs_wide_tabs_woo {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: flex-start;
+	align-content: flex-start;
+}
+
+#inspirelabs-booking-form .datepicker {
+  position: relative;
+  width: 100%;
+}
+
+#inspirelabs-booking-form.inspirelabs_wide_tabs_woo .datepicker {
+	width: calc(100% - 250px);
+}
+
+#inspirelabs-booking-form .datepicker .swiper-container {
+  display: flex;
+  flex-flow: row nowrap;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+  width: calc(100% - 40px) !important;
+  margin: 0 20px;
+}
+@media (min-width: 768px) {
+  #inspirelabs-booking-form .datepicker .swiper-container {
+    margin: 0 30px;
+    width: calc(100% - 60px) !important;
+  }
+}
+#inspirelabs-booking-form .datepicker .swiper-container .month {
+  display: block;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  position: relative;
+  padding: 1px;
+}
+#inspirelabs-booking-form .datepicker .swiper-container .month header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: solid 1px var(--color-border);
+  font-size: 18px;
+}
+#inspirelabs-booking-form .datepicker .swiper-container .month .days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: auto;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+#inspirelabs-booking-form .datepicker .swiper-container .month .days .day {
+  margin: 0;
+  padding-top: 100%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+}
+#inspirelabs-booking-form .datepicker .swiper-container .month .days .day:before, #inspirelabs-booking-form .datepicker .swiper-container .month .days .day:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  position: absolute;
+  z-index: -1;
+  color: transparent;
+}
+#inspirelabs-booking-form .datepicker .swiper-container .month .days .day:before {
+  border-width: 0 0 100px 100px;
+  bottom: 0;
+  left: 0;
+}
+#inspirelabs-booking-form .datepicker .swiper-container .month .days .day:after {
+  border-width: 100px 100px 0 0;
+  top: 0;
+  right: 0;
+}
+#inspirelabs-booking-form .datepicker .swiper-container .month .days .day.weekend > .day__wrapper > .day__no {
+  color: #CE4910;
+}
+#inspirelabs-booking-form .datepicker .swiper-container .month .days .day.today > .day__wrapper > .day__no {
+  font-weight: bold;
+}
+#inspirelabs-booking-form .datepicker .swiper-container .month .days .day.pre-book {
+  background: var(--color-status-pre-book);
+}
+#inspirelabs-booking-form .datepicker .swiper-container .month .days .day.pre-book__first-day-book:before {
+  border-color: transparent transparent var(--color-status-pre-book) transparent;
+}
+#inspirelabs-booking-form .datepicker .swiper-container .month .days .day.pre-book__last-day-book:after {
+  border-color: var(--color-status-pre-book) transparent transparent transparent;
+}
+#inspirelabs-booking-form .datepicker .swiper-container .month .days .day.book {
+  background: var(--color-status-book);
+}
+#inspirelabs-booking-form .datepicker .swiper-container .month .days .day.book__first-day-book:before {
+  border-color: transparent transparent var(--color-status-book) transparent;
+}
+#inspirelabs-booking-form .datepicker .swiper-container .month .days .day.book__last-day-book:after {
+  border-color: var(--color-status-book) transparent transparent transparent;
+}
+#inspirelabs-booking-form .datepicker .swiper-container .month .days .day.deny-reservation {
+  cursor: not-allowed;
+}
+#inspirelabs-booking-form .datepicker .swiper-container .month .days .day.deny-reservation:not(.pre-book):not(.book):not(.last-day-book):not(.first-day-book) {
+  background: var(--color-status-book);
+}
+#inspirelabs-booking-form .datepicker .swiper-container .month .days .day.allow-reservation {
+  cursor: pointer;
+}
+#inspirelabs-booking-form .datepicker .swiper-container .month .days .day.allow-reservation:hover {
+  background: var(--color-day-hover) !important;
+}
+#inspirelabs-booking-form .datepicker .swiper-container .month .days .day__wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+#inspirelabs-booking-form .datepicker .swiper-container .month .days .day__no {
+  color: black;
+  font-size: 16px;
+  line-height: 18px;
+}
+#inspirelabs-booking-form .datepicker .swiper-container .month .days .day__price {
+  font-size: 11px;
+  line-height: 14px;
+  color: rgba(0, 0, 0, 0.75);
+}
+#inspirelabs-booking-form .datepicker .swiper-container .month .days input[type=checkbox] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  visibility: hidden;
+}
+/* !!! night mode with half painted  */
+/*
+#inspirelabs-booking-form .datepicker .swiper-container .month .days input[type=checkbox]:not(.first):not(.last):checked + .day {
+  background: var(--color-day-selection);
+}
+*/
+
+#inspirelabs-booking-form .datepicker .swiper-container .month .days input[type=checkbox]:checked + .day {
+  background: var(--color-day-selection);
+}
+
+#inspirelabs-booking-form .datepicker .swiper-container .month .days input[type=checkbox].first:checked + .day:before, #inspirelabs-booking-form .datepicker .swiper-container .month .days input[type=checkbox].last:checked + .day:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  position: absolute;
+  z-index: -1;
+  color: transparent;
+}
+#inspirelabs-booking-form .datepicker .swiper-container .month .days input[type=checkbox].first:checked + .day:before {
+	border-color: transparent transparent var(--color-day-selection) transparent;
+}
+#inspirelabs-booking-form .datepicker .swiper-container .month .days input[type=checkbox].last:checked + .day:after {
+	border-color: var(--color-day-selection) transparent transparent transparent;
+}
+#inspirelabs-booking-form .datepicker-navigation {
+  padding: 0;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  background: #ededed;
+}
+@media (min-width: 768px) {
+  #inspirelabs-booking-form .datepicker-navigation {
+    width: 30px;
+  }
+}
+#inspirelabs-booking-form .datepicker-navigation.navigation-prev {
+  left: 0;
+}
+#inspirelabs-booking-form .datepicker-navigation.navigation-next {
+  right: 0;
+}
+#inspirelabs-booking-form .datepicker-navigation > svg {
+  display: block;
+  height: auto;
+  width: 10px;
+}
+@media (min-width: 768px) {
+  #inspirelabs-booking-form .datepicker-navigation > svg {
+    width: 14px;
+  }
+}
+#inspirelabs-booking-form .booking__summary {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  #inspirelabs-booking-form .booking__summary {
+    width: 250px;
+    padding: 8px 0 8px 20px;
+  }
+}
+#inspirelabs-booking-form .booking__summary__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: solid 1px var(--color-border);
+  font-size: 18px;
+}
+#inspirelabs-booking-form .booking__summary__items {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  border-bottom: solid 1px var(--color-border);
+  counter-reset: nights;
+}
+#inspirelabs-booking-form .booking__summary__items li {
+  padding: 0;
+}
+#inspirelabs-booking-form .booking__summary__items li.countable:before {
+  display: inline-block;
+  width: 20px;
+  counter-increment: nights;
+  content: counters(nights, ".") ". ";
+}
+#inspirelabs-booking-form .booking__summary__items li.countable time {
+  margin-right: 5px;
+}
+#inspirelabs-booking-form .booking__summary__items li:not(.countable) {
+  padding: 3px 0;
+}
+#inspirelabs-booking-form .booking__summary__items li:not(.countable) time {
+  margin-left: 5px;
+}
+#inspirelabs-booking-form .booking__summary__total {
+  margin-top: 10px;
+}
+#inspirelabs-booking-form .booking__summary .add_to_cart_button {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.booking-details {
+  display: flex;
+  flex-flow: column nowrap;
+  margin-bottom: 20px;
+}
+@media (min-width: 992px) {
+  .booking-details {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: 40px;
+  }
+}
+.booking-details__description {
+  order: 1;
+}
+@media (min-width: 992px) {
+  .booking-details__description {
+    padding: 8px 20px 8px 0;
+    width: calc(100% - var( --width-sidebar ));
+    order: 0;
+  }
+}
+.booking-details__attributes {
+  order: 0;
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .booking-details__attributes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+  }
+}
+@media (min-width: 992px) {
+  .booking-details__attributes {
+    display: block;
+    padding: 8px 0 8px 20px;
+    order: 1;
+    width: var(--width-sidebar);
+    border-left: solid 1px var(--color-border);
+  }
+}
+.booking-details__attributes dl {
+  margin: 0 0 20px;
+}
+.booking-details__attributes dl dt {
+  display: block;
+  border-bottom: solid 1px var(--color-border);
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+}
+.booking-details__attributes dl dd {
+  margin: 0;
+  display: block;
+}
+
+.booking-related-products {
+  position: relative;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.booking-related-products .products-carousel {
+  margin: 0 30px;
+  width: calc(100% - 60px) !important;
+  overflow: hidden;
+}
+.booking-related-products .products-carousel > .products {
+  list-style-type: none;
+  padding: 0;
+}
+.booking-related-products .products-carousel > .products > .product {
+  padding: 5px;
+  margin: 0;
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition-property: transform;
+}
+.booking-related-products .products-navigation {
+  padding: 0;
+  position: absolute;
+  top: 60px;
+  z-index: 1;
+  height: calc( 100% - 60px );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+}
+@media (min-width: 768px) {
+  .booking-related-products .products-navigation {
+    width: 30px;
+  }
+}
+.booking-related-products .products-navigation--prev {
+  left: 0;
+}
+.booking-related-products .products-navigation--next {
+  right: 0;
+}
+.booking-related-products .products-navigation > svg {
+  display: block;
+  height: auto;
+  width: 10px;
+}
+@media (min-width: 768px) {
+  .booking-related-products .products-navigation > svg {
+    width: 14px;
+  }
+}
+
+/* ------- Spinner ------*/
+
+
+@keyframes spinner {
+	to {transform: rotate(360deg);}
+}
+
+.spinner:before {
+	content: '';
+	box-sizing: border-box;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 50px;
+	height: 50px;
+	margin-top: -10px;
+	margin-left: -10px;
+	border-radius: 50%;
+	border: 2px solid #ccc;
+	border-top-color: #000;
+	animation: spinner .6s linear infinite;
+	z-index: 9999;
+}
+
+.entire-period-booking-alert {
+	display: none;
+}
+
+ul.booking__summary__items > li.countable > span.price {
+    font-size: 1.1em;
+}
+#inspirelabs-booking-form .booking__summary__items li {
+    list-style-type: none;
+}
+
+
+.booking__summary__items > li > .price {
+    min-height: unset !important;
+    line-height: 1.9em !important;
+    padding: 0px !important;
+}
+
+.short_booking_notice > .price {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+
+}
+

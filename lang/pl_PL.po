@@ -1,0 +1,359 @@
+# Copyright (C) 2022 Ilabs
+# This file is distributed under the same license as the Inspirelabs Bookings plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Inspirelabs Bookings 1.0\n"
+"Report-Msgid-Bugs-To: https://ilabs.dev/contact\n"
+"bookings\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2021-10-12T18:52:28+00:00\n"
+"PO-Revision-Date: 2021-10-12 21:00+0200\n"
+"X-Generator: Poedit 3.0\n"
+"X-Domain: inspirelabs-bookings\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 "
+"|| n%100>14) ? 1 : 2);\n"
+"Language: pl\n"
+
+#. Plugin Name
+msgid "iLabs Booking WooCommerce - apartments, boats, cars"
+msgstr ""
+
+#. Description
+msgid "This plugin in integration with Woocommerce allows you to create different products for rent, with the output of the calendar for booking on the product page."
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://ilabs.dev/"
+msgstr ""
+
+#. Author of the plugin
+msgid "Ilabs"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://ilabs.dev/"
+msgstr ""
+
+#: src/Plugin/Admin/Agreement/PDFAgreement.php:43
+msgid "Download Agreement as PDF"
+msgstr "Pobierz umowę w PDF"
+
+#: src/Plugin/Admin/Agreement/PDFAgreement.php:231
+msgid "Permission denied"
+msgstr "Brak uprawnień"
+
+#: src/Plugin/Admin/MainAdmin.php:63 src/Plugin/Admin/MainAdmin.php:64
+msgid "Bookings"
+msgstr "Rezerwacje"
+
+#: src/Plugin/Admin/MainAdmin.php:74 src/Plugin/Admin/MainAdmin.php:75
+msgid "Settings"
+msgstr "Ustawienia"
+
+#: src/Plugin/Admin/MainAdmin.php:131
+#: src/Plugin/Admin/WC_Product/PriceListDataTab.php:62
+msgid "Price List"
+msgstr "Cennik"
+
+#: src/Plugin/Admin/Settings/Settings.php:75
+msgid ""
+"Provide Your company details if they are different from WooCommerce's. Those "
+"informations are used when generating agreement."
+msgstr ""
+"Podaj dane swojej firmy, jeśli różnią się od tych w ustawieniach "
+"WooCommerce. Informacje te są wykorzystywane podczas generowaniu umów."
+
+#: src/Plugin/Admin/Settings/Settings.php:85
+msgid "Company name"
+msgstr "Nazwa firmy"
+
+#: src/Plugin/Admin/Settings/Settings.php:106
+msgid "Address"
+msgstr "Adres"
+
+#: src/Plugin/Admin/Settings/Settings.php:127
+msgid "City"
+msgstr "Miejscowość"
+
+#: src/Plugin/Admin/Settings/Settings.php:148
+msgid "Post code"
+msgstr "Kod pocztowy"
+
+#: src/Plugin/Admin/Settings/Settings.php:169
+msgid "E-mail"
+msgstr "E-mail"
+
+#: src/Plugin/Admin/Settings/Settings.php:190
+msgid "Phone"
+msgstr "Telefon"
+
+#: src/Plugin/Admin/Settings/Settings.php:210
+msgid "Tax ID"
+msgstr "Numer NIP"
+
+#: src/Plugin/Admin/Settings/Settings.php:249
+#: src/Plugin/Admin/Settings/settings_template.php:28
+msgid "Advance"
+msgstr "Zaliczka"
+
+#: src/Plugin/Admin/Settings/Settings.php:261
+msgid "Enable/disable"
+msgstr "Włącz/wyłącz"
+
+#: src/Plugin/Admin/Settings/Settings.php:274
+msgid "Min order amount"
+msgstr "Minimalna kwota zamówienia"
+
+#: src/Plugin/Admin/Settings/Settings.php:286
+msgid "Minimum order amount to allow advances."
+msgstr "Minimalna kwota zamówienia, aby umożliwić zaliczkę."
+
+#: src/Plugin/Admin/Settings/Settings.php:299
+msgid "Advance amount %"
+msgstr "Wysokość zaliczki w %"
+
+#: src/Plugin/Admin/Settings/Settings.php:322
+msgid "Round advance to"
+msgstr "Zaokrąglaj zaliczkę do"
+
+#: src/Plugin/Admin/Settings/Settings.php:345
+msgid "First advance payment"
+msgstr "Pierwsza płatność zaliczki"
+
+#: src/Plugin/Admin/Settings/Settings.php:357
+msgid "Number of days to pay the first advance from the date of order."
+msgstr "Liczba dni na wpłatę pierwszej zaliczki od daty złożenia zamówienia."
+
+#: src/Plugin/Admin/Settings/Settings.php:370
+msgid "Rest advance payment"
+msgstr "Pozostała część zaliczki"
+
+#: src/Plugin/Admin/Settings/Settings.php:382
+msgid ""
+"Number of days of payment of the rest advance before the booking fulfilment."
+msgstr ""
+"Liczba dni na wpłatę pozostałej kwoty kwoty, przed realizacją rezerwacji."
+
+#: src/Plugin/Admin/Settings/settings_template.php:24
+msgid "Company"
+msgstr "Firma"
+
+#: src/Plugin/Admin/Settings/settings_template.php:32
+msgid "Agreement"
+msgstr "Umowa"
+
+#: src/Plugin/Admin/WC_Order/order_details_template.php:21
+#: src/Plugin/Frontend/Order.php:168
+msgid "Date from"
+msgstr "Data od"
+
+#: src/Plugin/Admin/WC_Order/order_details_template.php:25
+#: src/Plugin/Frontend/Order.php:172
+msgid "Date to"
+msgstr "Data do"
+
+#: src/Plugin/Admin/WC_Order/order_details_template.php:29
+#: src/Plugin/Frontend/Order.php:176
+msgid "Nights no"
+msgstr "Liczba dni"
+
+#: src/Plugin/Admin/WC_Order/order_details_template.php:33
+msgid "Selected days"
+msgstr "Wybrane dni"
+
+#: src/Plugin/Admin/WC_Order/order_details_template.php:39
+#: src/Plugin/Frontend/DatePicker.php:182
+msgid "per"
+msgstr "Na"
+
+#: src/Plugin/Admin/WC_Order/order_details_template.php:49
+msgid "Edit booking"
+msgstr "Edycja rezerwacji"
+
+#: src/Plugin/Admin/WC_Product/PriceListDataTab.php:78
+msgid "Booking"
+msgstr "Rezerwacja"
+
+#: src/Plugin/Admin/WC_Product/PriceListDataTab.php:165
+msgid "Copy pricelist from:"
+msgstr "Kopiuj cennik z:"
+
+#: src/Plugin/Admin/WC_Product/PriceListDataTab.php:210
+msgid "Start date"
+msgstr "Data od"
+
+#: src/Plugin/Admin/WC_Product/PriceListDataTab.php:213
+msgid "End date"
+msgstr "Data do"
+
+#: src/Plugin/Admin/WC_Product/PriceListDataTab.php:216
+msgid "Price per night"
+msgstr "Cena za dobę"
+
+#: src/Plugin/Admin/WC_Product/PriceListDataTab.php:219
+msgid "Duration"
+msgstr "Schemat"
+
+#: src/Plugin/Admin/WC_Product/PriceListDataTab.php:222
+msgid "Options"
+msgstr "Opcje"
+
+#: src/Plugin/Admin/WC_Product/PriceListDataTab.php:235
+msgid "Clear pricelist"
+msgstr "Wyczyść cennik"
+
+#: src/Plugin/Admin/WC_Product/PriceListDataTab.php:238
+msgid "Add row"
+msgstr "Dodaj"
+
+#: src/Plugin/Admin/WC_Product/PriceListDataTab.php:327
+msgid "Edit"
+msgstr "Edytuj"
+
+#: src/Plugin/Admin/WC_Product/PriceListDataTab.php:330
+msgid "Delete"
+msgstr "Usuń"
+
+#: src/Plugin/Frontend/Order.php:122
+msgid "Remain"
+msgstr "Pozostało"
+
+#: src/Plugin/Helpers/Common.php:24
+msgid "Single days"
+msgstr "Pojedyncze dni"
+
+#: src/Plugin/Helpers/Common.php:25
+msgid "Let book for single days"
+msgstr "Rezerwacje na pojedyncze dni"
+
+#: src/Plugin/Helpers/Common.php:28
+msgid "Week"
+msgstr "Tydzień"
+
+#: src/Plugin/Helpers/Common.php:29
+msgid "Let book for week"
+msgstr "Rezerwacje na pełny tydzień"
+
+#: src/Plugin/Helpers/Common.php:32
+msgid "Period"
+msgstr "Okres"
+
+#: src/Plugin/Helpers/Common.php:33
+msgid "Let book for selected range of days"
+msgstr "Rezerwacja na wybrany okres"
+
+#: src/Plugin/Helpers/Common.php:55
+msgid "January"
+msgstr "Styczeń"
+
+#: src/Plugin/Helpers/Common.php:56
+msgid "Febraury"
+msgstr "Luty"
+
+#: src/Plugin/Helpers/Common.php:57
+msgid "March"
+msgstr "Marzec"
+
+#: src/Plugin/Helpers/Common.php:58
+msgid "April"
+msgstr "Kwiecień"
+
+#: src/Plugin/Helpers/Common.php:59
+msgid "May"
+msgstr "Maj"
+
+#: src/Plugin/Helpers/Common.php:60
+msgid "June"
+msgstr "Czerwiec"
+
+#: src/Plugin/Helpers/Common.php:61
+msgid "July"
+msgstr "Lipiec"
+
+#: src/Plugin/Helpers/Common.php:62
+msgid "August"
+msgstr "Sierpień"
+
+#: src/Plugin/Helpers/Common.php:63
+msgid "September"
+msgstr "Wrzesień"
+
+#: src/Plugin/Helpers/Common.php:64
+msgid "October"
+msgstr "Październik"
+
+#: src/Plugin/Helpers/Common.php:65
+msgid "November"
+msgstr "Listopad"
+
+#: src/Plugin/Helpers/Common.php:66
+msgid "December"
+msgstr "Grudzień"
+
+#: src/Plugin/Helpers/Common.php:79
+msgid "Sun"
+msgstr "Nd"
+
+#: src/Plugin/Helpers/Common.php:80
+msgid "Mon"
+msgstr "Pon"
+
+#: src/Plugin/Helpers/Common.php:81
+msgid "Tu"
+msgstr "Wt"
+
+#: src/Plugin/Helpers/Common.php:82
+msgid "Wed"
+msgstr "Śr"
+
+#: src/Plugin/Helpers/Common.php:83
+msgid "Th"
+msgstr "Czw"
+
+#: src/Plugin/Helpers/Common.php:84
+msgid "Fri"
+msgstr "Pt"
+
+#: src/Plugin/Helpers/Common.php:85
+msgid "Sat"
+msgstr "Sob"
+
+#: templates/add-to-cart-form.php:29
+msgid "Your booking details"
+msgstr "Szczegóły Twojej rezerwacji"
+
+#: templates/add-to-cart-form.php:33
+msgid "Total"
+msgstr "Suma"
+
+#: templates/add-to-cart-form.php:37
+msgid "I'm booking"
+msgstr "Rezerwuję"
+
+#: templates/booking_filter_form.php:13
+msgid "Select a date range"
+msgstr "Wybierz zakres dat"
+
+#: templates/booking_filter_form.php:19
+msgid "Filter"
+msgstr "Filtruj"
+
+#: templates/related-products.php:9
+msgid "Related bookings"
+msgstr "Podobne"
+
+#: src/Plugin/Frontend/Order.php:169
+msgid "Short booking fee"
+msgstr "Dopłata za krótką rezerwację"
+
+#: src/Plugin/Frontend/SingleProduct.php:182
+msgid "Short booking fee:"
+msgstr "Dopłata za krótką rezerwację:"
+
+#: src/Plugin/Admin/MainAdmin.php:92
+msgid "Additional payments"
+msgstr "Dodatkowe płatności"
